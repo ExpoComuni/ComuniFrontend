@@ -1,0 +1,23 @@
+.truck {
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /* Asegura que los bordes del fondo no se salgan */
+    border-radius: 1.5rem; /* Mantener el borde redondeado */
+  }
+  
+  .truck::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../jpgs/Truck.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.9; /* Menos opacidad (30%) */
+    z-index: -1;
+    filter: brightness(0.5); /* Mantiene el fondo más oscuro */
+    border-radius: inherit; /* Para que el borde redondeado aplique al pseudo-elemento */
+  }

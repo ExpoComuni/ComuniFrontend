@@ -1,0 +1,5 @@
+export { default as ConsoleHome } from "./Home"
+export { default as ConsoleLayout } from "./layout"
+export { default as ConsoleNews } from "./news"
+export { default as ConsoleEvents } from "./events"
+export { default as ConsoleReports } from "./reports"
