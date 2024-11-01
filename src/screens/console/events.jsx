@@ -63,7 +63,7 @@ const EventsScreen = () => {
       {/* List of events */}
       <div className="flex flex-wrap gap-8 mt-8">
         {eventList && eventList.length > 0 ? (
-          eventList.map((event) => (
+          eventList?.map((event) => (
             <Box key={event.id} p={5} bg="white" shadow="md" borderRadius="md">
               <Text fontSize="xl" fontWeight="bold" mb={2}>
                 {event.title}
