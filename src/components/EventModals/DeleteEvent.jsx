@@ -22,9 +22,9 @@ const DeleteEventModal = ({ event, onClose }) => {
 
   return (
     <>
-      <Text mb={4}>Are you sure you want to delete the event "{event.title}"?</Text>
+      <Text mb={4}>¿Estas seguro que quieres eliminar "{event.title}"?</Text>
       <Button colorScheme="red" onClick={handleDelete} isLoading={mutation.isLoading}>
-        Delete
+        Eliminar
       </Button>
     </>
   );

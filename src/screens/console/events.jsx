@@ -41,12 +41,12 @@ const EventsScreen = () => {
 
   // Show a loading message while fetching data
   if (isLoading) {
-    return <Text>Loading...</Text>;
+    return <Text>Cargando...</Text>;
   }
 
   // Show an error message if something goes wrong
   if (isError) {
-    return <Text>Error fetching events</Text>;
+    return <Text>Error al cargar los eventos</Text>;
   }
 
   return (
@@ -56,7 +56,7 @@ const EventsScreen = () => {
           Events
         </Text>
         <Button onClick={handleAddEvent} leftIcon={<PlusCircle />} colorScheme="blue">
-          Add Event
+          Agregar un evento
         </Button>
       </div>
 
@@ -70,13 +70,13 @@ const EventsScreen = () => {
               </Text>
               <Text mb={3}>{event.description}</Text>
               <Text fontSize="sm" color="gray.500">
-                Date: {new Date(event.eventdate).toLocaleDateString()} at {event.hour}
+                Día: {new Date(event.eventdate).toLocaleDateString()} at {event.hour}
               </Text>
               <Text fontSize="sm" color="gray.500">
-                Place: {event.place}
+                Lugar: {event.place}
               </Text>
               <Text fontSize="sm" color="gray.500">
-                Audience: {event.audience}
+                Audiencia: {event.audience}
               </Text>
               <Box mt={4} display="flex" gap={3}>
                 <Button
@@ -84,20 +84,20 @@ const EventsScreen = () => {
                   leftIcon={<Edit />}
                   colorScheme="yellow"
                 >
-                  Edit
+                  Editar
                 </Button>
                 <Button
                   onClick={() => handleDeleteEvent(event)}
                   leftIcon={<Trash />}
                   colorScheme="red"
                 >
-                  Delete
+                  Eliminar
                 </Button>
               </Box>
             </Box>
           ))
         ) : (
-          <Text className="text-black">No events available</Text>
+          <Text className="text-black">No hay eventos disponibles</Text>
         )}
       </div>
 
@@ -117,7 +117,7 @@ const EventsScreen = () => {
             {modalType === 'delete' && <DeleteEventModal event={selectedEvent} onClose={onClose} />}
           </ModalBody>
           <ModalFooter>
-            <Button onClick={onClose}>Cancel</Button>
+            <Button onClick={onClose}>Cancelar</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>

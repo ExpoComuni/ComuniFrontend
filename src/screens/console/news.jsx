@@ -62,21 +62,21 @@ const NewsScreen = () => {
   }
 
   if (isError) {
-    return <Text>Error loading news</Text>;
+    return <Text>Error descargando noticias</Text>;
   }
 
   return (
     <div className="p-10 w-full">
       <div className="flex justify-between">
         <Text fontSize="3xl" fontWeight="bold">
-          News
+          Noticias
         </Text>
         <Button
           onClick={handleAddNews}
           leftIcon={<PlusCircle />}
           colorScheme="blue"
         >
-          Add News
+          Agregar noticias
         </Button>
       </div>
 
@@ -98,7 +98,7 @@ const NewsScreen = () => {
               </Text>
               <Text mb={3}>{news.content}</Text>
               <Text fontSize="sm" color="gray.500">
-                By {news.author} on {news.publishedDate}
+                Por {news.author} el {news.publishedDate}
               </Text>
               <Box mt={4} display="flex" gap={3}>
                 <Button
@@ -106,20 +106,20 @@ const NewsScreen = () => {
                   leftIcon={<Edit />}
                   colorScheme="yellow"
                 >
-                  Edit
+                  Editar
                 </Button>
                 <Button
                   onClick={() => handleDeleteNews(news)}
                   leftIcon={<Trash />}
                   colorScheme="red"
                 >
-                  Delete
+                  Eliminar
                 </Button>
               </Box>
             </Box>
           ))
         ) : (
-          <Text>No news available</Text>
+          <Text>No noticias disponibles</Text>
         )}
       </div>
 
@@ -147,7 +147,7 @@ const NewsScreen = () => {
             )}
           </ModalBody>
           <ModalFooter>
-            <Button onClick={onClose}>Cancel</Button>
+            <Button onClick={onClose}>Cancelar</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>

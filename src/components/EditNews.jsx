@@ -47,30 +47,30 @@ const EditNewsModal = ({ news, onClose }) => {
   return (
     <>
       <FormControl mb={4}>
-        <FormLabel>Title</FormLabel>
+        <FormLabel>Titulo</FormLabel>
         <Input value={formData.title} onChange={(e) => setFormValue('title')(e.target.value)} />
       </FormControl>
       <FormControl mb={4}>
-        <FormLabel>Content</FormLabel>
+        <FormLabel>Contenido</FormLabel>
         <Textarea value={formData.content} onChange={(e) => setFormValue('content')(e.target.value)} />
       </FormControl>
       <FormControl mb={4}>
-        <FormLabel>Author</FormLabel>
+        <FormLabel>Autor</FormLabel>
         <Input value={formData.author} onChange={(e) => setFormValue('author')(e.target.value)} />
       </FormControl>
       <FormControl mb={4}>
-        <FormLabel>Published Date</FormLabel>
+        <FormLabel>Día de publicación</FormLabel>
         <Input type="date" value={formData.publishedDate} onChange={(e) => setFormValue('publishedDate')(e.target.value)} />
       </FormControl>
       <FormControl mb={4}>
-        <FormLabel>Image URL</FormLabel>
+        <FormLabel>Imagen URL</FormLabel>
         <Input type="file" accept="image/*" onChange={handleImageChange} />
         {imageBase64 && (
           <img src={imageBase64} alt="Current Image" style={{ marginTop: '10px', maxHeight: '100px' }} />
         )}
       </FormControl>
       <Button colorScheme="blue" onClick={handleSave} isLoading={mutation.isLoading}>
-        Update
+        Actualizar
       </Button>
     </>
   );
