@@ -126,18 +126,18 @@ export default function ReportModal({ isOpen, onClose }) {
                 <ModalBody display="flex" flexDirection="column" gap={8}>
                     <Input
                         type="text"
-                        placeholder="Title"
+                        placeholder="Titulo"
                         onChange={event => setFormSetter("title")(event.target.value)}
                         value={formSetter.title}
                     />
                     <Input
                         type="text"
-                        placeholder="Description"
+                        placeholder="Descripción"
                         onChange={event => setFormSetter("description")(event.target.value)}
                         value={formSetter.description}
                     />
                     <Select
-                        placeholder="Select report type"
+                        placeholder="Seleccione el tipo de reporte"
                         onChange={(event) => setFormSetter("reportType")(event.target.value)}
                         value={formSetter.reportType}
                     >
@@ -169,9 +169,9 @@ export default function ReportModal({ isOpen, onClose }) {
 
                 <ModalFooter>
                     <Button colorScheme="blue" mr={3} onClick={onClose}>
-                        Close
+                        Cerrar
                     </Button>
-                    <Button colorScheme="green" onClick={() => Mutation.mutate(formSetter)}>Submit</Button>
+                    <Button colorScheme="green" onClick={() => Mutation.mutate(formSetter)}>Enviar</Button>
                 </ModalFooter>
             </ModalContent>
         </Modal>

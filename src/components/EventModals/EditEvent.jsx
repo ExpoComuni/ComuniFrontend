@@ -35,31 +35,31 @@ const EditEventModal = ({ event, onClose }) => {
   return (
     <>
       <FormControl mb={4}>
-        <FormLabel>Title</FormLabel>
+        <FormLabel>Titulo</FormLabel>
         <Input value={formData.title} onChange={(e) => setFormValue('title')(e.target.value)} />
       </FormControl>
       <FormControl mb={4}>
-        <FormLabel>Description</FormLabel>
+        <FormLabel>Descripción</FormLabel>
         <Textarea value={formData.description} onChange={(e) => setFormValue('description')(e.target.value)} />
       </FormControl>
       <FormControl mb={4}>
-        <FormLabel>Event Date</FormLabel>
+        <FormLabel>Día del evento</FormLabel>
         <Input type="date" value={formData.eventdate} onChange={(e) => setFormValue('eventdate')(e.target.value)} />
       </FormControl>
       <FormControl mb={4}>
-        <FormLabel>Hour</FormLabel>
+        <FormLabel>Hora</FormLabel>
         <Input value={formData.hour} onChange={(e) => setFormValue('hour')(e.target.value)} />
       </FormControl>
       <FormControl mb={4}>
-        <FormLabel>Place</FormLabel>
+        <FormLabel>Lugar</FormLabel>
         <Input value={formData.place} onChange={(e) => setFormValue('place')(e.target.value)} />
       </FormControl>
       <FormControl mb={4}>
-        <FormLabel>Audience</FormLabel>
+        <FormLabel>Audiencia</FormLabel>
         <Input value={formData.audience} onChange={(e) => setFormValue('audience')(e.target.value)} />
       </FormControl>
       <FormControl mb={4}>
-        <FormLabel>Requirements</FormLabel>
+        <FormLabel>Requerimientos</FormLabel>
         <Textarea value={formData.requirements} onChange={(e) => setFormValue('requirements')(e.target.value)} />
       </FormControl>
       <FormControl mb={4}>
@@ -67,7 +67,7 @@ const EditEventModal = ({ event, onClose }) => {
         <Input value={formData.link} onChange={(e) => setFormValue('link')(e.target.value)} />
       </FormControl>
       <Button colorScheme="blue" onClick={handleSave} isLoading={mutation.isLoading}>
-        Update
+        Actualizar
       </Button>
     </>
   );
