@@ -30,6 +30,7 @@ const NewsScreen = () => {
     data: newsList = [],
     isLoading,
     isError,
+    error
   } = useQuery({
     queryKey: ["news"],
     queryFn: () => getAllNews(),
@@ -62,6 +63,7 @@ const NewsScreen = () => {
   }
 
   if (isError) {
+    console.log(error)
     return <Text>Error descargando noticias</Text>;
   }
 
@@ -81,8 +83,8 @@ const NewsScreen = () => {
       </div>
 
       <div className="flex flex-wrap gap-8">
-        {newsList ? (
-          newsList.map((news) => (
+        {newsList && newsList.length > 0 ?  (
+          newsList?.map((news) => (
             <Box key={news.id} p={5} bg="white" shadow="md" borderRadius="md" maxW={300}>
               <div className="flex justify-center">
                 <Image
