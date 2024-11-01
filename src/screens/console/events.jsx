@@ -53,7 +53,7 @@ const EventsScreen = () => {
     <div className="p-10 w-full">
       <div className="flex justify-between">
         <Text fontSize="3xl" fontWeight="bold">
-          Events
+          Eventos
         </Text>
         <Button onClick={handleAddEvent} leftIcon={<PlusCircle />} colorScheme="blue">
           Agregar un evento
@@ -106,9 +106,9 @@ const EventsScreen = () => {
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>
-            {modalType === 'add' && 'Add Event'}
-            {modalType === 'edit' && 'Edit Event'}
-            {modalType === 'delete' && 'Delete Event'}
+            {modalType === 'add' && 'Agregar evento'}
+            {modalType === 'edit' && 'Editar evento'}
+            {modalType === 'delete' && 'Eliminar evento'}
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>

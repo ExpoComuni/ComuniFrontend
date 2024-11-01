@@ -128,9 +128,9 @@ const NewsScreen = () => {
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>
-            {modalType === "add" && "Add News"}
-            {modalType === "edit" && "Edit News"}
-            {modalType === "delete" && "Delete News"}
+            {modalType === "add" && "Agregar noticias"}
+            {modalType === "edit" && "Editar noticias"}
+            {modalType === "delete" && "Eliminar noticias"}
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
