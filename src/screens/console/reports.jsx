@@ -37,7 +37,7 @@ const ReportsScreen = () => {
     onSuccess: () => {
       queryClient.invalidateQueries("reports"); // Refetch reports after marking attended
       toast({
-        title: "Report marked as attended.",
+        title: "Reporte marcado como atendido.",
         status: "success",
         duration: 3000,
         isClosable: true,
@@ -45,7 +45,7 @@ const ReportsScreen = () => {
     },
     onError: () => {
       toast({
-        title: "Error marking report as attended.",
+        title: "Error al marcarlo como atendido.",
         status: "error",
         duration: 3000,
         isClosable: true,
@@ -63,14 +63,14 @@ const ReportsScreen = () => {
   }
 
   if (isError) {
-    return <Text>Error loading reports</Text>;
+    return <Text>Error cargando reportes</Text>;
   }
 
   return (
     <div className="p-10 w-full">
       <div className="flex justify-between">
         <Text fontSize="3xl" fontWeight="bold">
-          Reports
+          Reportes
         </Text>
       </div>
 
@@ -90,7 +90,7 @@ const ReportsScreen = () => {
               </Text>
               <Text mb={3}>{report.description}</Text>
               <Text fontSize="sm" color="gray.500">
-                Location: {report.location}
+                Ubicación: {report.location}
               </Text>
               {generateGoogleMapsUrl(report.location) ? (
                 <Button
@@ -101,10 +101,10 @@ const ReportsScreen = () => {
                   leftIcon={<ExternalLink />}
                   mt={3}
                 >
-                  View on Maps
+                  Ver en Maps
                 </Button>
               ) : (
-                <Text color="red.500">Invalid location data</Text>
+                <Text color="red.500">Ubicacion inválida</Text>
               )}
               <Box mt={4} display="flex" gap={3}>
                 <Button
@@ -113,13 +113,13 @@ const ReportsScreen = () => {
                   colorScheme="green"
                   isDisabled={report.attended}
                 >
-                  {report.attended ? "Attended" : "Mark as Attended"}
+                  {report.attended ? "Atendido" : "Marcar como atendido"}
                 </Button>
               </Box>
             </Box>
           ))
         ) : (
-          <Text>No reports available</Text>
+          <Text>No hay reportes disponibles</Text>
         )}
       </div>
     </div>

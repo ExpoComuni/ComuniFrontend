@@ -20,18 +20,18 @@ const Sidebar = () => {
 
   const sidebarItems = [
     // { name: 'Home', path: '/console', icon: <Home /> },
-    { name: 'Reports', path: '/console/reports', icon: <FileText /> },
-    { name: 'News', path: '/console/news', icon: <Newspaper /> },
-    { name: 'Events', path: '/console/events', icon: <Activity/> },
+    { name: 'Reportes', path: '/console/reports', icon: <FileText /> },
+    { name: 'Noticias', path: '/console/news', icon: <Newspaper /> },
+    { name: 'Eventos', path: '/console/events', icon: <Activity/> },
     // { name: 'Analytics', path: '/console/analytics', icon: <BarChart /> },
-    { name: 'Settings', path: '/console/settings', icon: <Settings /> },
+    { name: 'Ajustes', path: '/console/settings', icon: <Settings /> },
   ];
 
   return (
     <div className="h-screen bg-green-dark text-white flex flex-col p-10">
       <Link to="/console/reports" className=" flex items-center gap-3 p-4 text-lg font-bold">
       <img draggable="false" src={Logo} alt="Communi" className="rounded-xl h-16 w-16" />
-      Communi Console</Link>
+      Consola Comuni</Link>
       <nav className="flex-1 mt-16">
         <ul className="space-y-2">
           {sidebarItems.map((item) => (
