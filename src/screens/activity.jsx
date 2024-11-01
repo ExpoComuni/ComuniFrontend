@@ -55,13 +55,13 @@ const activityData = [
     icon: <CalendarHeart size={20} className="text-violet-800" />,
     route: "events"
   },
-  {
-    title: "Mi Cantón",
-    description: "Información acerca de Alajuelita.",
-    headerColor: "bg-red-700",
-    iconBackgroundColor: "bg-red-300",
-    icon: <MapPin size={22} className="text-red-600" />,
-  },
+  // {
+  //   title: "Mi Cantón",
+  //   description: "Información acerca de Alajuelita.",
+  //   headerColor: "bg-red-700",
+  //   iconBackgroundColor: "bg-red-300",
+  //   icon: <MapPin size={22} className="text-red-600" />,
+  // },
 ];
 
 export default function Activity() {
